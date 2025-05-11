@@ -45,12 +45,12 @@ class UserResource extends Resource
                         ->required()
                         ->email()
                         ->rules([ 'regex:/^c\d{8}\.[a-z]+@csav\.edu\.ph$/i',
-                             'unique:users,email'
+                            'unique:users,email'
                         ])
                         ->validationMessages([
                             'regex' => 'The email must follow the format like c202227799.delacruz@csav.edu.ph.',
-                        ])
-                        ->unique(ignoreRecord: true),
+                        ]),
+                       
 
                         TextInput::make('password')
                         ->password()
