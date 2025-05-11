@@ -31,8 +31,8 @@ class Login extends LoginPage
             ->label('Login')
             ->required()
             ->autocomplete()
-            ->autofocus()
-            ->extraInputAttributes(['tabindex' => 1]);
+            ->autofocus();
+           
     } 
 
     protected function getCredentialsFromFormData(array $data): array
